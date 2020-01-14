@@ -3,9 +3,15 @@
 // La partita termina quando il giocatore inserisce un numero “vietato”, ovvero presente nella lista di numeri random, o raggiunge il numero massimo possibile di tentativi consentiti.
 // Al termine della partita il software deve comunicare il punteggio, cioè il numero di volte che l’utente ha inserito un numero consentito.
 
+var elencoNumeriPc = [];
 
+for (i=0; i<16; i++){
+  numeroRandom = numeriPc (1, 100);
+  elencoNumeriPc.push(numeroRandom);
+}
+console.log(elencoNumeriPc);
 // funzioni
-function generator (min, max){
+function numeriPc (min, max){
   min = Math.ceil(min);
   max = Math.floor (max);
   var random = Math.floor(Math.random() * (max - min + 1));
