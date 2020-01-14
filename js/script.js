@@ -10,10 +10,36 @@ for (i=0; i<16; i++){
   elencoNumeriPc.push(numeroRandom);
 }
 console.log(elencoNumeriPc);
+
+var numeroUtente = parseInt(prompt('inserisci un numero da 1 a 100'));
+
+var i =0;
+while (i<84){
+  if (numeroUtente == elencoNumeriPc){
+    alert('spiacente, hai perso');
+  }
+  else if (numeroUtente != elencoNumeriPc) {
+    numeroUtente = parseInt(prompt('inserisci un altro numero da 1 a 100'));
+  }
+  else {
+    alert('alla gande! Hai vinto!');
+  }
+  i++;
+  console.log(numeroUtente);
+}
+
+var risultato = [];
+risultato.push(numeroUtente);
+
+
 // funzioni
 function numeriPc (min, max){
   min = Math.ceil(min);
   max = Math.floor (max);
   var random = Math.floor(Math.random() * (max - min + 1));
   return random;
+}
+
+function numeriUtente (){
+
 }
