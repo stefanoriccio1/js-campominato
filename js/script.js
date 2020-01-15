@@ -22,8 +22,14 @@ console.log(elencoNumeriPc);
 var i = 0;
 while (i< tentativiMassimi && (controlloNumeri(elencoNumeriPc, numeroUtente) == false)){
   var numeroUtente = parseInt(prompt('Inserisci un numero da 1 a 100'));
+  while (tentativiUtente.length< tentativiMassimi){
   if (tentativiUtente.includes(numeroUtente) == false){
     tentativiUtente.push(numeroUtente);
+  }
+  else {
+    alert('devi inserire un numero mai inserito')
+  }
+  i++;
   }
 
   if (controlloNumeri(elencoNumeriPc, numeroUtente) == true){
