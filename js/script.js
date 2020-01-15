@@ -78,7 +78,7 @@ function numeriPc (min, max){
 function controlloNumeri (arrayDaControllare, numero) {
   var i = 0;
   var risultato = false;
-  while (i < arrayDaControllare.length && risultato = false){
+  while (i < arrayDaControllare.length && risultato == false){
     if(numero == arrayDaControllare){
     risultato = true;
   }
