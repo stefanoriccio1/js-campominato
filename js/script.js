@@ -18,17 +18,11 @@ console.log(elencoNumeriPc);
 
 // In seguito deve chiedere all’utente di inserire per 84 volte un numero da 1 a 100, se il numero è presente nella lista dei numeri generati, la partita termina, altrimenti continua chiedendo all’utente un altro numero.
 
-function controlloNumeri (arrayDaControllare, numero) {
-  var i = 0;
-  var risulato = false;
-  while ( i< arrayDaControllare.length && risultato = false){
-    if(numero == arrayDaControllare){
-    risultato = true;
-  }
-  return risultato;
+var i = 0
+while (i< tentativiMassimi.length){
+var numeroUtente = parseInt(prompt('Inserisci un numero da 1 a 100'))
+console.log(numeroUtente);
 }
-}
-
 
 
 
@@ -81,11 +75,13 @@ function numeriPc (min, max){
 }
 
 // funzione di controllo risultato
-function controlloRisultato(arrayDaControllare, numeroDaControllare){
-  for (var i = 0; i < arrayDaControllare.length; i++) {
-    if (numeroDaControllare == arrayDaControllare[i]){
-      return true;
-    }
+function controlloNumeri (arrayDaControllare, numero) {
+  var i = 0;
+  var risultato = false;
+  while (i < arrayDaControllare.length && risultato = false){
+    if(numero == arrayDaControllare){
+    risultato = true;
   }
-  return false;
+  return risultato;
+}
 }
