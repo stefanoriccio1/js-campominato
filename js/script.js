@@ -81,14 +81,17 @@ function numeriPc (min, max){
 
 // funzione di controllo risultato
 function controlloNumeri (arrayDaControllare, numero) {
-  for (i=0; i < arrayDaControllare.length; i++){
-    if(numero == arrayDaControllare [i]){
-    return true;
+var i = 0;
+var risultato = false
+while (i<arrayDaControllare.length && risultato == false){
+  if(numero == arrayDaControllare [i]){
+      risultato = true;
+    }
+    i++;
   }
-}
- return false;
+   return risultato;
 }
 
-var arrayTest = [1, 3, 5, 6, 7];
-var trovato = controlloNumeri (arrayTest, 35);
+var arrayTest = [1, 3, 5, 6, 7, 8];
+var trovato = controlloNumeri(arrayTest, 3);
 console.log(trovato);
