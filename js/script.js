@@ -5,10 +5,10 @@
 
 var elencoNumeriPc = [];
 var tentativiUtente = [];
-var tentativiMassimi = 5;
+var tentativiMassimi = 7;
 
 while (elencoNumeriPc.length < 16){
-  var numeroRandom = numeriPc (1, 20);
+  var numeroRandom = numeriPc (1, 100);
   if (elencoNumeriPc.includes(numeroRandom) == false){
     elencoNumeriPc.push(numeroRandom);
   }
@@ -19,15 +19,18 @@ console.log(elencoNumeriPc);
 // In seguito deve chiedere all’utente di inserire per 84 volte un numero da 1 a 100, se il numero è presente nella lista dei numeri generati, la partita termina, altrimenti continua chiedendo all’utente un altro numero.
 
 
-// var i = 0
-// while (i< tentativiMassimi && (controlloNumeri(elencoNumeriPc, numeroUtente) == false)){
-//   var numeroUtente = parseInt(prompt('Inserisci un numero da 1 a 100'));
-//   console.log(numeroUtente);
-//   if (controlloNumeri(elencoNumeriPc, numeroUtente) == true){
-//     alert('hai perso!');
-//   }
-// i++;
-// }
+var i = 0;
+while (i< tentativiMassimi && (controlloNumeri(elencoNumeriPc, numeroUtente) == false)){
+  var numeroUtente = parseInt(prompt('Inserisci un numero da 1 a 100'));
+  if (tentativiUtente.includes(numeroUtente) == false){
+    tentativiUtente.push(numeroUtente);
+  }
+
+  if (controlloNumeri(elencoNumeriPc, numeroUtente) == true){
+    alert('hai perso!');
+  }
+i++;
+}
 
 
 
@@ -91,7 +94,3 @@ while (i<arrayDaControllare.length && risultato == false){
   }
    return risultato;
 }
-
-var arrayTest = [1, 3, 5, 6, 7, 8];
-var trovato = controlloNumeri(arrayTest, 3);
-console.log(trovato);
