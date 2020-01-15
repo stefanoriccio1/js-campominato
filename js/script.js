@@ -30,7 +30,7 @@ while (i< tentativiMassimi && (controlloNumeri(elencoNumeriPc, numeroUtente) == 
     console.log(tentativiUtente);
   }
   if (controlloNumeri(elencoNumeriPc, numeroUtente) == true){
-    alert('hai perso!');
+    alert('hai perso!' + ' il tuo punteggio è ' + '');
   }
  i++;
 }
