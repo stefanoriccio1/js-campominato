@@ -6,6 +6,7 @@
 var elencoNumeriPc = [];
 var tentativiUtente = [];
 var tentativiMassimi = 84;
+var punteggio = 0;
 
 while (elencoNumeriPc.length < 16){
   var numeroRandom = numeriPc (1, 100);
@@ -27,10 +28,12 @@ while (i< tentativiMassimi && (controlloNumeri(elencoNumeriPc, numeroUtente) == 
   }
   if (controlloNumeri(tentativiUtente, numeroUtente) == false){
     tentativiUtente.push(numeroUtente);
+    punteggio++;
     console.log(tentativiUtente);
   }
   if (controlloNumeri(elencoNumeriPc, numeroUtente) == true){
-    alert('hai perso!' + ' il tuo punteggio è ' + '');
+    alert('hai perso!' + ' il tuo punteggio è ' + punteggio);
+    console.log(punteggio);
   }
  i++;
 }
